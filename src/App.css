@@ -1,0 +1,471 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Header */
+
+.header {
+  background: linear-gradient(
+    135deg,
+    #166534,
+    #22c55e
+  );
+
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+/* Main Container */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Top Section */
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.top-section h2 {
+  color: #166534;
+}
+
+.employee-count {
+  background-color: #dcfce7;
+
+  color: #166534;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+/* Form */
+
+.form-section {
+  background-color: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  margin-bottom: 40px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2 {
+  color: #166534;
+
+  margin-bottom: 25px;
+}
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-weight: bold;
+
+  color: #334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: #22c55e;
+
+  box-shadow: 0 0 0 2px #dcfce7;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Form Buttons */
+
+.form-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.add-button,
+.cancel-button {
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.add-button {
+  background-color: #16a34a;
+
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #15803d;
+}
+
+.cancel-button {
+  background-color: #64748b;
+
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #475569;
+}
+
+/* Search and Filter */
+
+.filter-section {
+  display: flex;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.filter-section input {
+  flex: 1;
+
+  padding: 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+}
+
+.filter-section select {
+  width: 220px;
+
+  padding: 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  background-color: white;
+}
+
+.filter-section input:focus,
+.filter-section select:focus {
+  outline: none;
+
+  border-color: #22c55e;
+}
+
+/* Employee Section */
+
+.employee-section h2 {
+  color: #166534;
+
+  margin-bottom: 25px;
+}
+
+/* Employee Grid */
+
+.employee-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+/* Employee Card */
+
+.employee-card {
+  background-color: white;
+
+  border-radius: 10px;
+
+  padding: 25px;
+
+  border-top: 5px solid #22c55e;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Employee Header */
+
+.employee-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.employee-avatar {
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  background-color: #dcfce7;
+
+  color: #166534;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 25px;
+
+  font-weight: bold;
+}
+
+.employee-header h3 {
+  color: #166534;
+
+  margin-bottom: 4px;
+}
+
+.employee-id {
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* Employee Details */
+
+.employee-details {
+  border-top: 1px solid #e2e8f0;
+
+  padding-top: 15px;
+}
+
+.employee-details p {
+  margin-bottom: 12px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color: #475569;
+}
+
+.employee-details strong {
+  color: #1e293b;
+}
+
+/* Card Buttons */
+
+.card-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+  flex: 1;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #dbeafe;
+
+  color: #1d4ed8;
+}
+
+.edit-button:hover {
+  background-color: #bfdbfe;
+}
+
+.delete-button {
+  background-color: #fee2e2;
+
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #fecaca;
+}
+
+/* No Data */
+
+.no-data {
+  background-color: white;
+
+  text-align: center;
+
+  padding: 50px;
+
+  border-radius: 10px;
+
+  color: #64748b;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #14532d;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 25px;
+
+  margin-top: 40px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .employee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .top-section {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .filter-section select {
+    width: 100%;
+  }
+
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+}
